@@ -9,7 +9,7 @@ const products = [
     price: 2.5,
     unit: "100g",
     tone: "#f08a24",
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80",
+    img: "https://images.pexels.com/photos/4871131/pexels-photo-4871131.jpeg",
     desc: "Balanced masala for daily veggies."
   },
   {
@@ -18,7 +18,7 @@ const products = [
     price: 2.9,
     unit: "100g",
     tone: "#e6a700",
-    img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+    img: "https://images.pexels.com/photos/4198418/pexels-photo-4198418.jpeg",
     desc: "Tamil Nadu style, roasted lentil base."
   },
   {
@@ -27,7 +27,7 @@ const products = [
     price: 2.7,
     unit: "100g",
     tone: "#f3c23c",
-    img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80",
+    img: "https://images.unsplash.com/photo-1490026220125-b42f3d66abd6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     desc: "Peppery, tangy, ready for quick rasam."
   },
   {
@@ -36,7 +36,7 @@ const products = [
     price: 3.1,
     unit: "120g",
     tone: "#d65f2f",
-    img: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80",
+    img: "https://plus.unsplash.com/premium_photo-1726876987962-17ef4dd597ff?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     desc: "Idli podi with cold-pressed sesame oil notes."
   },
   {
@@ -54,7 +54,7 @@ const products = [
     price: 2.8,
     unit: "100g",
     tone: "#f08f53",
-    img: "https://images.unsplash.com/photo-1604908176888-3c9ad9c13b53?auto=format&fit=crop&w=800&q=80",
+    img: "https://images.unsplash.com/photo-1603122060985-65dd53451c9b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNoaWNrcGVhJTIwcG93ZGVyfGVufDB8fDB8fHww",
     desc: "Delhi-style dark, tangy chole blend."
   },
   {
@@ -63,7 +63,7 @@ const products = [
     price: 2.8,
     unit: "100g",
     tone: "#f2a679",
-    img: "https://images.unsplash.com/photo-1628485811705-51f9eb9fc830?auto=format&fit=crop&w=800&q=80",
+    img: "https://images.unsplash.com/photo-1543376798-62217a8d85cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hc2FsYXxlbnwwfHwwfHx8MA%3D%3D",
     desc: "Slow-simmered kidney bean curry spice."
   },
   {
@@ -72,7 +72,7 @@ const products = [
     price: 3.0,
     unit: "100g",
     tone: "#ce6d4f",
-    img: "https://images.unsplash.com/photo-1612874472278-5c1b07f9d8d6?auto=format&fit=crop&w=800&q=80",
+    img: "https://images.unsplash.com/photo-1591465001609-ded6360ecaab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1hc2FsYXxlbnwwfHwwfHx8MA%3D%3D",
     desc: "Creamy, smoky profile for dal makhni."
   },
   {
@@ -81,7 +81,7 @@ const products = [
     price: 3.2,
     unit: "80g",
     tone: "#b25d2c",
-    img: "https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=800&q=80",
+    img: "https://images.unsplash.com/photo-1638729979587-d864cd963849?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNhYmppJTIwbWFzYWxhfGVufDB8fDB8fHww",
     desc: "Robust finishing blend, North Indian style."
   },
   {
@@ -90,7 +90,7 @@ const products = [
     price: 2.6,
     unit: "90g",
     tone: "#8bcf7a",
-    img: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80",
+    img: "https://images.pexels.com/photos/4871244/pexels-photo-4871244.jpeg",
     desc: "Rock salt friendly masala for fast days."
   },
   {
@@ -99,7 +99,7 @@ const products = [
     price: 3.0,
     unit: "70g",
     tone: "#7bb67f",
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80",
+    img: "https://images.pexels.com/photos/4198429/pexels-photo-4198429.jpeg",
     desc: "Caffeine-free spice mix for vrat-friendly chai."
   },
   {
@@ -108,7 +108,7 @@ const products = [
     price: 3.5,
     unit: "150g",
     tone: "#d4705f",
-    img: "https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=80",
+    img: "https://plus.unsplash.com/premium_photo-1723672935173-aa5543344b7b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNhYmppJTIwbWFzYWxhfGVufDB8fDB8fHww",
     desc: "Cooling nut-spice mix for milk or desserts."
   }
 ];
