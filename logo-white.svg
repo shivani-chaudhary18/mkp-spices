@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="180" viewBox="0 0 320 180" role="img" aria-label="MKP Masale logo">
+  <rect width="320" height="180" fill="transparent"/>
+  <text x="18" y="110" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="110" font-weight="800" fill="#ffffff">MKP</text>
+  <text x="20" y="150" font-family="Pacifico, 'Segoe UI', cursive" font-size="44" fill="#ffffff">Masale</text>
+  <rect x="18" y="158" width="200" height="18" rx="3" fill="#4b4b4b" opacity="0.8"/>
+  <text x="26" y="171" font-family="Montserrat, 'Segoe UI', sans-serif" font-size="12" fill="#ffffff">Group of My Kitchen Plus</text>
+</svg>
