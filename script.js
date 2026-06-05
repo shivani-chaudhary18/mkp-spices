@@ -1,116 +1,56 @@
 // Editable endpoints
-const APP_SCRIPT_URL = ""; // paste your Google Apps Script Web App URL
-const STRIPE_PAYMENT_LINK = ""; // optional Stripe Payment Link for online payments
+const APP_SCRIPT_URL = "";          // paste your Google Apps Script Web App URL
+const STRIPE_PAYMENT_LINK = "";     // optional Stripe Payment Link for online payments
 
 const products = [
-  {
-    id: "sabji",
-    name: "Sabji Masala",
-    price: 2.5,
-    unit: "100g",
-    tone: "#f08a24",
-    img: "https://images.pexels.com/photos/4871131/pexels-photo-4871131.jpeg",
-    desc: "Balanced masala for daily veggies."
-  },
-  {
-    id: "sambar",
-    name: "Sambar Masala",
-    price: 2.9,
-    unit: "100g",
-    tone: "#e6a700",
-    img: "https://images.pexels.com/photos/4198418/pexels-photo-4198418.jpeg",
-    desc: "Tamil Nadu style, roasted lentil base."
-  },
-  {
-    id: "rasam",
-    name: "Rasam Powder",
-    price: 2.7,
-    unit: "100g",
-    tone: "#f3c23c",
-    img: "https://images.unsplash.com/photo-1490026220125-b42f3d66abd6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Peppery, tangy, ready for quick rasam."
-  },
-  {
-    id: "gunpowder",
-    name: "Gun Powder (Molaga Podi)",
-    price: 3.1,
-    unit: "120g",
-    tone: "#d65f2f",
-    img: "https://plus.unsplash.com/premium_photo-1726876987962-17ef4dd597ff?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    desc: "Idli podi with cold-pressed sesame oil notes."
-  },
-  {
-    id: "chai",
-    name: "Chai Masala",
-    price: 3.4,
-    unit: "75g",
-    tone: "#c48a6a",
-    img: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80",
-    desc: "Warming spices for kadak masala chai."
-  },
-  {
-    id: "chole",
-    name: "Chole Masala",
-    price: 2.8,
-    unit: "100g",
-    tone: "#f08f53",
-    img: "https://images.unsplash.com/photo-1603122060985-65dd53451c9b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGNoaWNrcGVhJTIwcG93ZGVyfGVufDB8fDB8fHww",
-    desc: "Delhi-style dark, tangy chole blend."
-  },
-  {
-    id: "rajma",
-    name: "Rajma Masala",
-    price: 2.8,
-    unit: "100g",
-    tone: "#f2a679",
-    img: "https://images.unsplash.com/photo-1543376798-62217a8d85cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hc2FsYXxlbnwwfHwwfHx8MA%3D%3D",
-    desc: "Slow-simmered kidney bean curry spice."
-  },
-  {
-    id: "dalmakhni",
-    name: "Dal Makhni Masala",
-    price: 3.0,
-    unit: "100g",
-    tone: "#ce6d4f",
-    img: "https://images.unsplash.com/photo-1591465001609-ded6360ecaab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1hc2FsYXxlbnwwfHwwfHx8MA%3D%3D",
-    desc: "Creamy, smoky profile for dal makhni."
-  },
-  {
-    id: "garam",
-    name: "Garam Masala",
-    price: 3.2,
-    unit: "80g",
-    tone: "#b25d2c",
-    img: "https://images.unsplash.com/photo-1638729979587-d864cd963849?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNhYmppJTIwbWFzYWxhfGVufDB8fDB8fHww",
-    desc: "Robust finishing blend, North Indian style."
-  },
-  {
-    id: "vrat",
-    name: "Vrat Masala",
-    price: 2.6,
-    unit: "90g",
-    tone: "#8bcf7a",
-    img: "https://images.pexels.com/photos/4871244/pexels-photo-4871244.jpeg",
-    desc: "Rock salt friendly masala for fast days."
-  },
-  {
-    id: "vrat-chai",
-    name: "Vrat Chai Masala",
-    price: 3.0,
-    unit: "70g",
-    tone: "#7bb67f",
-    img: "https://images.pexels.com/photos/4198429/pexels-photo-4198429.jpeg",
-    desc: "Caffeine-free spice mix for vrat-friendly chai."
-  },
-  {
-    id: "thandai",
-    name: "Thandai Powder",
-    price: 3.5,
-    unit: "150g",
-    tone: "#d4705f",
-    img: "https://plus.unsplash.com/premium_photo-1723672935173-aa5543344b7b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNhYmppJTIwbWFzYWxhfGVufDB8fDB8fHww",
-    desc: "Cooling nut-spice mix for milk or desserts."
-  }
+  { id: "sabji", name: "Sabji Masala", price: 220, unit: "100g", tone: "#f08a24",
+    img: "products-image/sabji masala.png",
+    desc: "Balanced masala for daily veggies.",
+    amazon: "https://amzn.in/d/0e7GNV95" },
+  { id: "sambar", name: "Sambar Masala", price: 220, unit: "100g", tone: "#e6a700",
+    img: "products-image/sambar masala.png",
+    desc: "Tamil Nadu style, roasted lentil base.",
+    amazon: "https://amzn.in/d/0i0Fw7jv" },
+  { id: "rasam", name: "Rasam Powder", price: 220, unit: "100g", tone: "#f3c23c",
+    img: "products-image/rasam powder.png",
+    desc: "Peppery, tangy, ready for quick rasam.",
+    amazon: "https://www.amazon.in/your-rasam-link" },
+  { id: "gunpowder", name: "Gun Powder", price: 220, unit: "100g", tone: "#d65f2f",
+    img: "products-image/gun powder.png",
+    desc: "Idli podi with cold-pressed sesame oil notes.",
+    amazon: "https://www.amazon.in/your-gunpowder-link" },
+  { id: "chai", name: "Chai Masala", price: 220, unit: "100g", tone: "#c48a6a",
+    img: "products-image/chai masala.png",
+    desc: "Warming spices for kadak masala chai.",
+    amazon: "https://www.amazon.in/your-chai-link" },
+  { id: "chole", name: "Chole Masala", price: 220, unit: "100g", tone: "#f08f53",
+    img: "products-image/chole masala.png",
+    desc: "Delhi-style dark, tangy chole blend.",
+    amazon: "https://amzn.in/d/0g2AEtcu" },
+  { id: "rajma", name: "Rajma Masala", price: 220, unit: "100g", tone: "#f2a679",
+    img: "products-image/rajma masala.png",
+    desc: "Slow-simmered kidney bean curry spice.",
+    amazon: "https://www.amazon.in/your-rajma-link" },
+  { id: "dalmakhni", name: "Dal Makhni Masala", price: 220, unit: "100g", tone: "#ce6d4f",
+    img: "products-image/dal makhni.jpeg",
+    desc: "Creamy, smoky profile for dal makhni.",
+    amazon: "https://amzn.in/d/0fjB87Rf" },
+  { id: "garam", name: "Garam Masala", price: 220, unit: "100g", tone: "#b25d2c",
+    img: "products-image/garam masala.png",
+    desc: "Robust finishing blend, North Indian style.",
+    amazon: "https://www.amazon.in/your-garam-link" },
+  { id: "vrat", name: "Vrat Masala", price: 220, unit: "100g", tone: "#8bcf7a",
+    img: "products-image/vrat special.png",
+    desc: "Rock salt friendly masala for fast days.",
+    amazon: "https://amzn.in/d/0eI3o9Cj" },
+  { id: "vrat-chai", name: "Vrat Chai Masala", price: 220, unit: "100g", tone: "#7bb67f",
+    img: "products-image/vrat chai.png",
+    desc: "Caffeine-free spice mix for vrat-friendly chai.",
+    amazon: "https://www.amazon.in/your-vrat-chai-link" },
+  { id: "thandai", name: "Thandai Powder", price: 220, unit: "100g", tone: "#d4705f",
+    img: "products-image/thandai powder.png",
+    desc: "Cooling nut-spice mix for milk or desserts.",
+    amazon: "https://www.amazon.in/your-thandai-link" }
 ];
 
 const cart = {};
@@ -125,10 +65,9 @@ const cartStatus = document.getElementById("cart-status");
 const clearCartBtn = document.getElementById("clear-cart");
 const form = document.getElementById("order-form");
 const submitBtn = document.getElementById("submit-btn");
-const formHint = document.getElementById("form-hint");
 
 function formatMoney(n) {
-  return "$" + n.toFixed(2);
+  return "₹" + n.toFixed(2);
 }
 
 function renderProducts() {
@@ -143,7 +82,11 @@ function renderProducts() {
         <h3>${p.name}</h3>
         <p>${p.desc}</p>
         <div class="price">${formatMoney(p.price)} <span class="unit">/ ${p.unit}</span></div>
-        <button class="pill primary add" data-id="${p.id}">Add to cart</button>
+        <small class="buy-note">Bulk here • Single pack on Amazon</small>
+        <div class="actions">
+          <button class="pill primary add" data-id="${p.id}">Add to cart (bulk)</button>
+          <a class="pill ghost full" href="${p.amazon}" target="_blank" rel="noreferrer">Buy on Amazon</a>
+        </div>
       </div>
     `;
     grid.appendChild(card);

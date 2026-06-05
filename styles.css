@@ -155,7 +155,7 @@ h2 { font-size: clamp(24px, 3.5vw, 34px); }
 }
 
 .product-card .thumb {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3/ 4;
   min-height: 180px;
   background-size: cover;
   background-position: center;
@@ -313,3 +313,8 @@ input:focus, textarea:focus, select:focus { outline: 2px solid var(--red); borde
   .product-card:hover { transform: translateY(-4px); box-shadow: 0 16px 26px rgba(0,0,0,0.18); }
   .info-card:hover { transform: translateY(-10px); }
 }
+
+
+.product-card .actions { display: grid; gap: 8px; }
+.product-card .buy-note { font-size: 13px; opacity: 0.86; }
+c:\Users\HP\Documents\New project\main.jpg
